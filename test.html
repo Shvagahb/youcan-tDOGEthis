@@ -1,5 +1,33 @@
 <!DOCTYPE html>
 <head>
+<style>
+.thumb {
+  display: inline-block;
+  background-color:rgba(0, 0, 0, 0.5);
+  position: relative;
+  margin: 0 10px 10px 0;
+  border-radius: 3px;
+  transition: all 0.2s ease-in-out;
+}
+.thumb:before {
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  border: 4px solid rgba(0,0,0,0.6);
+  border-radius: 3px;
+}
+.thumb img { 
+  display: block; 
+  border-radius: 3px;
+}
+.thumb:hover:before { 
+   box-shadow: 0 0 5px #81bce3;
+   border: 4px solid rgba(250,250,250,0.6);
+}
+</style>
 </head>
 
 <body>
@@ -14,13 +42,18 @@
 
 
      
-  <center><DIV style="float:left; margin-top: 0px; margin-left: 400px;">
-     <p class="login button"> 
-          <input SRC="submit3.png" type=image ALIGN=ABSMIDDLE/> 
-     </p></DIV>
-     <DIV style="float:right; margin-top: 0px; margin-right: 400px;"><p class="login button"> 
-          <input SRC="drdoge.png" type="image" ALIGN=ABSMIDDLE /> 
-     </p></DIV>
+  <center>
+    <DIV  style="float:left; margin-top: 0px; margin-left: 400px;">
+     <p class="thumb"> 
+        <img SRC="submit3.png" /> 
+     </p>
+    </DIV>
+     
+    <DIV style="float:right; margin-top: 0px; margin-right: 400px;">
+     <p class="thumb"> 
+        <img SRC="drdoge.png" /> 
+     </p>
+    </DIV>
  </center>
 </form>
 
