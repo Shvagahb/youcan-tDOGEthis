@@ -22,6 +22,15 @@
   -moz-transform: rotateZ(3deg);
   transition: all 0.5s ease-out;
 }
+.card4 {
+  left: 81%;
+  margin-left: -11em;
+  z-index: 8;
+  transform: rotateZ(3deg);
+  -webkit-transform: rotateZ(3deg);
+  -moz-transform: rotateZ(3deg);
+  transition: all 0.5s ease-out;
+}
 .start .card {
   left: -100%;
   opacity: 0;
@@ -35,9 +44,11 @@ body {
   font-size: 0.75em;
   line-height: 1.5em;
 }
+
 h1 {
   font-family: Helvetica, Arial, sans-serif;
 }
+
 .card-container {
   position: relative;
   width: 18em;
