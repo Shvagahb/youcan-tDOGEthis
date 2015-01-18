@@ -1,0 +1,61 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ststyles.css">
+<link rel="stylesheet" type="text/css" href="ststyle.css">
+<script src="jquery1.js"></script>
+<script src="jquery2.js"></script>
+<script src="http://s.cdpn.io/44759/jquery.hammer.min.js"></script>
+</head>
+<body>
+    <div id="stack1" class="card-container start">
+        <section id="card1" class="card card1">
+             <h1>Card 1</h1>
+ <a href="#">
+                <img src="http://www.placehold.it/500x200" />
+            </a>
+
+            <p>This was the first period where evidence of dinosaurs is present, though they were not there at the very beginning. It began right after the Permian mass extinction which wiped out 90% of all life and marks the beginning of the Mesozoic Era.</p>
+        </section>
+        <section id="card2" class="card card2">
+             <h1>Card 2</h1>
+ <a href="#">
+                <img src="http://www.placehold.it/500x200" />
+            </a>
+
+            <p>This was the first period where evidence of dinosaurs is present, though they were not there at the very beginning. It began right after the Permian mass extinction which wiped out 90% of all life and marks the beginning of the Mesozoic Era.</p>
+        </section>
+        <section id="card3" class="card card3">
+             <h1>Card 3</h1>
+ <a href="#">
+                <img src="http://www.placehold.it/500x200" />
+            </a>
+
+            <p>This was the first period where evidence of dinosaurs is present, though they were not there at the very beginning. It began right after the Permian mass extinction which wiped out 90% of all life and marks the beginning of the Mesozoic Era.</p>
+        </section>
+    </div>
+<script>
+$(document).ready(function() {
+  
+  var stack1 = $('#stack1');
+  
+  stack1.removeClass('start');
+  
+  stack1.hammer().on('tap', function(event) {
+    stack1.addClass('hover');
+    event.stopPropagation();
+  });
+  
+  
+  $(document).hammer().on('tap', function(event) {
+    stack1.removeClass('hover');
+    $('.card').removeClass('hover');
+  });
+  
+  $('.card').hammer().on('tap', function(event) {
+      $('.card').removeClass('hover');
+      $(this).addClass('hover');
+  });
+});
+</script>
+</body>
+</html>
